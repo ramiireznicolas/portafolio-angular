@@ -1,0 +1,182 @@
+.cabeza {
+  background-color: #ffffe4;
+  padding: 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  z-index: 999;
+  height: 40px;
+}
+
+.cabeza h1 {
+  font-size: 17px;
+  z-index: 999;
+  margin: auto 0 auto 15px;
+  color: #1c1c1c;
+}
+
+.cabeza .desktop {
+  display: none;
+}
+
+.cabeza .main-header {
+  height: 25px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 0.4rem;
+  margin: auto;
+}
+
+.cabeza .main-header .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin-left: -100%;
+  margin-top: 35px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+
+.cabeza .main-header .main-nav.show {
+  margin-left: 0;
+}
+
+.cabeza .main-header .nav-links {
+  background-color: #ffffe4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.cabeza .main-header .nav-links .link-item {
+  margin-top: 32px;
+  color: #1c1c1c;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.cabeza .main-header .nav-links .link-item::after {
+  position: absolute;
+  content: "";
+  background-color: #1c1c1c;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  color: #ffffe4;
+}
+
+.cabeza .main-header .nav-links .link-item:hover::after {
+  width: 100%;
+  color: #ffffe4;
+}
+
+.cabeza .main-header .button-menu {
+  width: 100%;
+  margin: auto;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: none;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.cabeza .main-header .button-menu span {
+  width: 30px;
+  height: 2px;
+  margin-bottom: 3px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  -webkit-transform-origin: 4px 0px;
+  transform-origin: 4px 0px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 100;
+}
+
+.cabeza .main-header .button-menu.close span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(0px, 0px);
+  transform: rotate(45deg) translate(0px, 0px);
+  background: #000000;
+}
+
+.cabeza .main-header .button-menu.close span:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.cabeza .main-header .button-menu.close span:nth-child(3) {
+  display: none;
+}
+
+/* MEDIA QUERIES NAVBAR*/
+@media (min-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .cabeza .main-header .button-menu {
+    display: none;
+  }
+  .cabeza .desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 750px;
+    margin: auto 20px;
+  }
+  .cabeza .desktop .link {
+    text-decoration: none;
+    color: black;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.2em;
+  }
+}

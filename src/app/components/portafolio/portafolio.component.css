@@ -1,0 +1,184 @@
+.portafolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.portafolio .sectionPortafolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.portafolio .proyecto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 10px 5px;
+  padding: 15px;
+  border: 1px solid rgba(126, 126, 126, 0.86);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.61);
+  max-width: 350px;
+}
+
+.portafolio .proyecto img {
+  width: 200px;
+}
+
+.portafolio .proyecto .btn {
+  margin: 15px auto 0px;
+  width: 100px;
+  height: 30px;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.portafolio .proyecto .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.portafolio .proyecto .btn:hover::before {
+  width: 100%;
+}
+
+.portafolio .proyecto .btn:hover {
+  color: black;
+}
+
+.portafolio .proyecto .btn:active:before {
+  background: #b9b9b9;
+}
+
+.portafolio details {
+  cursor: pointer;
+  border: 1px solid rgba(126, 126, 126, 0.86);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.61);
+  margin: 15px auto;
+  width: 70%;
+  font-size: 1.2em;
+}
+
+.portafolio details .challenge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.portafolio details .challenge .desafios {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding: 3px;
+}
+
+.portafolio details .challenge .desafios::after {
+  content: "";
+  inset: 4px;
+}
+
+.portafolio details .challenge .desafios::before {
+  content: "";
+  width: 100px;
+  height: 140%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#00ccff),
+    to(#d400d4)
+  );
+  background: linear-gradient(#00ccff, #d400d4);
+  -webkit-animation: animate-desafios 10s linear infinite;
+  animation: animate-desafios 10s linear infinite;
+  position: absolute;
+}
+
+@-webkit-keyframes animate-desafios {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-desafios {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.portafolio details .challenge .desafios a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8em;
+  z-index: 99;
+  background-color: #000000;
+}
+
+.portafolio details .challenge .desafios img {
+  width: 100px;
+  border-radius: 2px;
+}
