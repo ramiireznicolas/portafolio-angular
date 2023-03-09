@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -10,31 +9,24 @@
 
 .fadeTop {
   opacity: 0;
-  -webkit-transform: translate(0, 10vh);
   transform: translate(0, 10vh);
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .fadeRight {
   opacity: 0;
-  -webkit-transform: translate(10vh, 0vh);
   transform: translate(10vh, 0vh);
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .fadeLeft {
   opacity: 0;
-  -webkit-transform: translate(-10vh, 0vh);
   transform: translate(-10vh, 0vh);
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .visible {
   opacity: 1;
-  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
